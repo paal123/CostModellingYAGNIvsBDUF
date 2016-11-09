@@ -1,0 +1,12 @@
+"""Simple cost estimation"""
+COST_A = 400
+COST_BA = 40
+COST_B = 90
+COST_ROLLBACK_B = 5
+PROBABILITY_B = 0.9
+
+ESTIMATED_COST_BDUF = COST_A + COST_BA + COST_ROLLBACK_B*(1-PROBABILITY_B)
+ESTIMATED_COST_YAGNI = COST_A + COST_B*PROBABILITY_B
+
+print('Estimated cost for upfront is {0}'.format(ESTIMATED_COST_BDUF))
+print('Estimated cost for YAGNI is {0}'.format(ESTIMATED_COST_YAGNI))
